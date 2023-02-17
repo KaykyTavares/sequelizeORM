@@ -1,13 +1,9 @@
 const express = require("express");
-const bodyParser = require("body-parser");
+const routes = require("./routes")
 
 const app = express();
 
-app.use(bodyParser.json());
-
-app.get("/teste", (req, res) => {
-  res.status(200).send({ mensagem: "boas vindas a API" });
-});
+routes(app)
 
 const port = 3000;
 
