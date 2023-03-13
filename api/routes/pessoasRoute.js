@@ -1,12 +1,12 @@
 const { Router } = require("express")
-const PessoasController = require("../controllers/PessoaController.js")
+const PessoaController = require("../controllers/PessoaController.js")
 
 const router = Router()
 
-router.get("/pessoas", PessoasController.pegarTodasAsPessoas)
-router.get("/pessoas/:id", PessoasController.pegarUmaPessoa)
-router.post("/pessoas", PessoasController.criaPessoa)
-router.put("/pessoas/:id", PessoasController.atualizaPessoa)
-router.delete("/pessoas/:id", PessoasController.deletaPessoa)
+router.get("/pessoas", PessoaController.pegarTodasAsPessoas)
+router.get("/pessoas/:id", PessoaController.pegarUmaPessoa)
+router.post("/pessoas", PessoaController.criaPessoa)
+router.put("/pessoas/:id", PessoaController.atualizaPessoa)
+router.delete("/pessoas/:id", PessoaController.deletaPessoa)
 
 module.exports = router
